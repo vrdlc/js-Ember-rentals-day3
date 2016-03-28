@@ -1,4 +1,4 @@
-<h1> Welcome to Super Rentals </h1>
+<h1>Welcome to Super Rentals</h1>
 
 {{#each model.announcements as |announcement|}}
   {{announcement-tile announcement=announcement}}
@@ -16,3 +16,5 @@ We hope you find exactly what you're looking for in a place to stay.
 
 {{#link-to 'about'}}<p>About</p>{{/link-to}}
 {{#link-to 'contact'}}<p>Click here to contact us</p>{{/link-to}}
+
+{{announcements-mgmt announcements=model.announcements activateAnnouncement="activateAnnouncement" deactivateAnnouncement="deactivateAnnouncement" destroyAnnouncement="destroyAnnouncement" saveAnnouncement="saveAnnouncement"}}

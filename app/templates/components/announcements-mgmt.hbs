@@ -1,0 +1,21 @@
+{{#if manageAnnouncements}}
+  <button {{action 'announcementManagementHide'}}>Hide Announcement Manager</button>
+  <h1>Manage Announcements</h1>
+  <ul>
+    {{#each announcements as |announcement|}}
+      <li>{{announcement.title}}
+        {{#if announcement.current}}
+          <button {{action 'deactivateAnnouncement' announcement}}>Deactivate</button>
+        {{else}}
+          <button {{action 'activateAnnouncement' announcement}}>Activate</button>
+        {{/if}}
+        <button {{action 'delete' announcement}}>Delete</button>
+      </li>
+    {{/each}}
+  </ul>
+
+  {{new-announcement saveAnnouncement="saveAnnouncement"}}
+
+{{else}}
+  <button {{action 'announcementManagementShow'}}>Manage Announcements</button>
+{{/if}}
