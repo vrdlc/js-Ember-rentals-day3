@@ -8,11 +8,6 @@ export default Ember.Component.extend({
     },
     imageHide: function() {
       this.set('isImageShowing', false);
-    },
-    delete(rental) {
-      if (confirm('Woah bruchacho, easy there. You sure?')) {
-        this.sendAction('destroyRental', rental);
-      }
     }
   }
 });

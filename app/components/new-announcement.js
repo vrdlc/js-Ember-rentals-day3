@@ -10,7 +10,7 @@ export default Ember.Component.extend({
       var params = {
         title: this.get('title') ? this.get('title') : "",
         message: this.get('message') ? this.get('message') : "",
-        current: false
+        current: true
       };
       this.set('addNewAnnouncement', false);
       this.sendAction('saveAnnouncement', params);
