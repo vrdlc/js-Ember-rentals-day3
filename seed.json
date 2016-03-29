@@ -30,5 +30,15 @@
 		"title": "Big Exciting News!",
 		"message": "We just received $10 million in seed funding. Hopefully we figure out how to monitize this website before our money runs out! We probably won't.",
 		"current": true
+	}],
+	"cities": [{
+		"name": "Lima",
+		"country": "Peru"
+	}, {
+		"name": "La Pas",
+		"country": "Bolivia"
+	},{
+		"name": "Tegucigalpa",
+		"country": "Honduras"
 	}]
 }

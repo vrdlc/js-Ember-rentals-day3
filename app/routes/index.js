@@ -8,7 +8,8 @@ export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
       rentals: this.store.findAll('rental'),
-      announcements: this.store.findAll('announcement')
+      announcements: this.store.findAll('announcement'),
+      cities: this.store.findAll('city')
     });
   },
   actions: {
