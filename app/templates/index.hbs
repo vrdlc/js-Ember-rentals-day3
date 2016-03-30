@@ -4,25 +4,24 @@
   {{announcement-tile announcement=announcement}}
 {{/each}}
 
-We hope you find exactly what you're looking for in a place to stay.
-
+<p>We hope you find exactly what you're looking for in a place to stay.</p>
+<hr>
 <ul>
   {{#each model.rentals as |rental|}}
      {{rental-tile rental=rental update="update" destroyRental="destroyRental"}}
   {{/each}}
 </ul>
-
-{{new-rental save2="save3"}}
-
+<hr>
 <h2> Cities </h2>
-
 <ul>
   {{#each model.cities as |city|}}
-    <li>{{city.name}}</li>
+    <li>{{#link-to 'city' city.id}}{{city.name}}{{/link-to}}</li>
   {{/each}}
 </ul>
 
-{{#link-to 'about'}}<p>About</p>{{/link-to}}
+{{new-city saveCity="saveCity"}}
+
+{{#link-to 'about'}}<button>About</button>{{/link-to}}
 {{#link-to 'contact'}}<p>Click here to contact us</p>{{/link-to}}
 
 {{announcements-mgmt announcements=model.announcements activateAnnouncement="activateAnnouncement" deactivateAnnouncement="deactivateAnnouncement" destroyAnnouncement="destroyAnnouncement" saveAnnouncement="saveAnnouncement"}}

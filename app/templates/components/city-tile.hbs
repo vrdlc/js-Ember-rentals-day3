@@ -1,0 +1,12 @@
+{{city.name}} is located in {{city.country}}
+
+<hr>
+
+Rentals in available in {{city.name}}:
+
+<ul>
+{{#each city.rentals as |rental|}}
+  <li>{{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city.name}} {{/link-to}}</li>
+  <button {{action 'destroyCity' city}}>Delete City</button>
+{{/each}}
+</ul>
