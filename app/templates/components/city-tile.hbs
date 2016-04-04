@@ -1,12 +1,11 @@
-{{city.name}} is located in {{city.country}}
-
+<h4>Location: {{fullLocation}}</h4>
 <hr>
 
-Rentals in available in {{city.name}}:
+<h3>Rentals in available in {{city.name}}:</h3>
 
 <ul>
-{{#each city.rentals as |rental|}}
-  <li>{{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city.name}} {{/link-to}}</li>
+{{#each sortedRentals as |rental|}}
+  <li>{{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city.name}} {{rental.cost}}{{/link-to}}</li>
   <button {{action 'destroyCity' city}}>Delete City</button>
 {{/each}}
 </ul>

@@ -1,4 +1,4 @@
-<h1>Welcome to Super Rentals</h1>
+<!-- <h1>Welcome to Super Rentals</h1>
 
 {{#each model.announcements as |announcement|}}
   {{announcement-tile announcement=announcement}}
@@ -8,14 +8,14 @@
 <hr>
 <ul>
   {{#each model.rentals as |rental|}}
-     {{rental-tile rental=rental update="update" destroyRental="destroyRental"}}
+     {{rental-tile rental=rental update="update" destroyRental="destroyRental"}}{{rental-cost rental}}
   {{/each}}
 </ul>
-<hr>
+<hr> -->
 <h2> Cities </h2>
 <ul>
   {{#each model.cities as |city|}}
-    <li>{{#link-to 'city' city.id}}{{city.name}}{{/link-to}}</li>
+    <li>{{city-popularity city}} {{#link-to 'city' city.id}}{{city.name}}{{/link-to}}</li>
   {{/each}}
 </ul>
 
